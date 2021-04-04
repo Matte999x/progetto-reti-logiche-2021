@@ -8,12 +8,14 @@
 #define IMG_DIM_MAX 128 * 128
 #define MAX_PIXEL_VALUE 255
 
+
 typedef struct {
 	int dimX;
 	int dimY;
 	int imgIn[IMG_DIM_MAX];
 	int imgOut[IMG_DIM_MAX];
 }mem;
+
 
 // tbgen.exe numTest [dimX dimY]
 int main(int argc, char** argv){
@@ -106,7 +108,6 @@ int main(int argc, char** argv){
         }
 
     }
-
 
     // --- FILE WRITING ---
 
@@ -235,7 +236,6 @@ int main(int argc, char** argv){
         "   assert false report \"Simulation Ended! TEST PASSED\" severity failure;\n"
         "end process test;\n\n"
         "end projecttb;\n");
-
 
     free(ram);
 
